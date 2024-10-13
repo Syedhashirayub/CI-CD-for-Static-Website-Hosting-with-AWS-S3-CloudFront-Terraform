@@ -1,0 +1,1 @@
+# Deploy-a-static-website-using-AWS-and-terraform
