@@ -57,7 +57,7 @@ The CI/CD pipeline is already configured via .github/workflows/terraform.yml.
 Once you push changes to the repository, GitHub Actions will automatically deploy them to your AWS environment.
 
 ### 6️⃣ Access the Website 🌍
-- After deployment, your static website will be available at https://carvilla.run.place and https://www.carvilla.run.place.
+- After deployment, your static website will be available at https://www.carvilla.run.place.
 
 
 ## 📂 Key Terraform Resources
