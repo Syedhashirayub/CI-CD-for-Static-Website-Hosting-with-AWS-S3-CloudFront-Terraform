@@ -1,6 +1,7 @@
 # 🚀 CI/CD for Static Website Hosting with AWS S3, CloudFront & Terraform
 
 This project demonstrates how to set up a CI/CD pipeline for hosting a static website on AWS using S3, CloudFront, and Terraform. The process is fully automated using GitHub Actions.
+![Screenshot 2024-10-15 at 3 06 31 PM](https://github.com/user-attachments/assets/845dc5cf-8b45-4519-9f33-e16024e3d100)
 
 ## ✨ Project Highlights
 
