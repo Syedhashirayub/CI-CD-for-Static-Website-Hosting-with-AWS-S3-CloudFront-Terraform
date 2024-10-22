@@ -66,7 +66,17 @@ The project uses GitHub Actions to automate the CI/CD process. Here's how it wor
 
 ### 6️⃣ Access the Website 🌍
 - After deployment, your static website will be available at https://www.carvilla.run.place.
+  
+### 7️⃣ Custom Error Pages 📄
+To handle errors such as 403 (Forbidden) and 404 (Not Found), this project includes custom error pages:
 
+403.html: Displays when access is forbidden.
+
+![Screenshot 2024-10-22 at 4 38 12 PM](https://github.com/user-attachments/assets/522ef86c-edca-4b46-9b57-af561af6f70f)
+
+404.html: Displays when the requested resource is not found.
+
+![Screenshot 2024-10-22 at 4 38 26 PM](https://github.com/user-attachments/assets/197e7496-62a7-4ca7-81e1-a0a4e17e5d64)
 
 ## 📂 Key Terraform Resources
 
