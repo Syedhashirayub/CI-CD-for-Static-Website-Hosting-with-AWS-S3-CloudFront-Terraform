@@ -49,6 +49,9 @@ resource "aws_s3_object" "error_404" {
   key          = "404.html"
   source       = "${var.website_folder_path}/404.html"
   content_type = "text/html"
+
+  # Adding source_hash forces Terraform to detect changes
+  source_hash  = filemd5("${var.website_folder_path}/404.html")
 }
 
 resource "aws_s3_object" "error_403" {
@@ -56,6 +59,9 @@ resource "aws_s3_object" "error_403" {
   key          = "403.html"
   source       = "${var.website_folder_path}/403.html"
   content_type = "text/html"
+
+  # Adding source_hash forces Terraform to detect changes
+  source_hash  = filemd5("${var.website_folder_path}/403.html")
 }
 
 
