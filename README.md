@@ -55,8 +55,12 @@ Set up the following repository secrets in your GitHub repository:
 - Confirm when prompted, and Terraform will set up S3, CloudFront, and the SSL certificate.
 
 ### 5️⃣ Automate with GitHub Actions 🤖
-The CI/CD pipeline is already configured via .github/workflows/terraform.yml.
-Once you push changes to the repository, GitHub Actions will automatically deploy them to your AWS environment.
+
+The project uses GitHub Actions to automate the CI/CD process. Here's how it works:
+
+- **Workflow**: 
+   - The workflow defined in `.github/workflows/terraform.yml` is triggered on every push to the main branch.
+   - It runs `terraform init`, `terraform plan`, and `terraform apply` to deploy the latest changes to AWS.
 
 ![Screenshot 2024-10-21 at 3 24 40 PM](https://github.com/user-attachments/assets/df01d38d-a8e5-4e44-95f0-d51a442fdb7d)
 
