@@ -83,7 +83,6 @@ To handle errors such as 403 (Forbidden) and 404 (Not Found), this project inclu
 - S3 Bucket: Stores the website files.
 - ACM Certificate: Provides SSL certificates for secure HTTPS access.
 - CloudFront: CDN that delivers the website globally with custom domain support.
-- GitHub Actions: Automates the deployment process.
 
 ## 📜 Custom Domain DNS Records
 Add the DNS records to your domain registrar for ACM validation and CloudFront distribution.
