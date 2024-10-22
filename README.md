@@ -24,7 +24,7 @@ This project sets up a secure and scalable static website hosting environment on
     ├── main.tf                # Terraform main file
     ├── variables.tf           # Variables for the project
     ├── outputs.tf             # Outputs for DNS validation
-    ├── .github/workflows/ci.yml # GitHub Actions CI/CD file
+    ├── .github/workflows/terraform.yml # GitHub Actions CI/CD file
     └── README.md              # Project documentation
 
 ## ⚙️ Setup Instructions
@@ -32,8 +32,7 @@ This project sets up a secure and scalable static website hosting environment on
 ### 1️⃣ Clone the Repository
 
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/Syedhashirayub/Deploy-a-static-website-using-AWS-and-terraform.git
     
 ### 2️⃣ Set up Terraform
 Ensure Terraform is installed and the AWS CLI is configured.
