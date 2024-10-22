@@ -58,6 +58,8 @@ Set up the following repository secrets in your GitHub repository:
 The CI/CD pipeline is already configured via .github/workflows/terraform.yml.
 Once you push changes to the repository, GitHub Actions will automatically deploy them to your AWS environment.
 
+![Screenshot 2024-10-21 at 3 24 40 PM](https://github.com/user-attachments/assets/df01d38d-a8e5-4e44-95f0-d51a442fdb7d)
+
 ### 6️⃣ Access the Website 🌍
 - After deployment, your static website will be available at https://www.carvilla.run.place.
 
