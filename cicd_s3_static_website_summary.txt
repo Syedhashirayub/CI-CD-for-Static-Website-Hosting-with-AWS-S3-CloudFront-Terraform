@@ -1,0 +1,54 @@
+
+CI/CD for S3 Static Website Deployment 🚀
+
+This project automates the deployment of a static website hosted on AWS S3, secured via CloudFront and an SSL certificate. We use Terraform to define and manage the AWS infrastructure, while GitHub Actions automates the continuous integration and deployment (CI/CD) process. Here’s how everything works step by step:
+
+Project Breakdown 🛠️
+
+1. S3 Bucket for Static Website 🗂️
+   - Amazon S3 is used to store the static files of your website (HTML, CSS, JS, images, etc.).
+   - The files are publicly accessible through CloudFront (a content delivery network), but the bucket itself is private for security reasons.
+   - Versioning is enabled so previous versions of files are kept in case you need to roll back.
+
+2. ACM Certificate for HTTPS 🔐
+   - The website uses SSL for secure connections.
+   - An Amazon Certificate Manager (ACM) certificate is requested and validated for the domain carvilla.run.place and www.carvilla.run.place.
+
+3. CloudFront for Content Delivery 🌍
+   - CloudFront distributes your website globally, providing faster load times and enhanced security.
+   - It enforces HTTPS and uses a special access control configuration so only CloudFront can access the S3 bucket contents.
+
+4. Custom Error Pages ❗
+   - The project includes custom error pages (e.g., 404 for "Page Not Found" and 403 for "Access Forbidden"). These are displayed when something goes wrong.
+   - Instead of showing an ugly error message, users will see custom-designed error pages.
+
+Automation Using GitHub Actions ⚙️
+
+The deployment process is fully automated using GitHub Actions, making the CI/CD pipeline seamless. Here’s what happens:
+
+- Trigger: Every time you push code changes to the main branch, the GitHub Actions workflow runs automatically.
+- Terraform Deployment: The workflow:
+   1. Initializes Terraform.
+   2. Plans the changes that need to be applied (i.e., updates to AWS).
+   3. Applies the changes, deploying or updating the website infrastructure and content.
+
+Custom Error Handling 🔄
+
+If users try to access something that doesn’t exist or they are not allowed to see:
+- 404 Page: They will see the custom-designed 404 page instead of the default AWS message.
+- 403 Page: If access is restricted, they see the 403 page.
+
+Setup Process 🛠️
+
+1. Clone the Repository: Pull the project to your local machine.
+2. AWS Credentials: Set up your AWS credentials in the GitHub repository secrets for automated access.
+3. Modify the Files: Customize your HTML, CSS, or any static files.
+4. Push Your Changes: When you push the changes to GitHub, the pipeline deploys your updated website automatically.
+
+What This Does for You 💡
+
+- No Manual Deployment: Once set up, you don’t need to manually upload files to S3 or configure CloudFront. Everything is automatic with each code change.
+- Secure & Fast Website: Your website is served securely using HTTPS and distributed across the globe with CloudFront, ensuring fast loading times.
+- Error Pages: Custom 403 and 404 error pages provide a better user experience.
+
+In simple terms, this project ensures that your static website is always deployed quickly, securely, and with minimal manual effort thanks to automation. 🌟
